@@ -1,99 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>제조 부하율 스마트 모니터링 시스템</title>
-    <meta
-      name="description"
-      content="feat: Initialize manufacturing load monitoring system 커밋 기반 프로젝트 소개 페이지"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <div class="container">
-        <p class="eyebrow">feat: Initialize manufacturing load monitoring system</p>
-        <h1>제조 부하율 스마트 모니터링 시스템</h1>
-        <p class="hero-desc">
-          제조 공정의 부하율, 배치수, 제조량을 실시간으로 모니터링하고 분석하는
-          엔터프라이즈급 대시보드 프로젝트를 소개합니다.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="https://github.com/heejun6905-create/-" target="_blank" rel="noreferrer">프로젝트 저장소</a>
-          <a
-            class="btn ghost"
-            href="https://github.com/heejun6905-create/-/commit/62f5da29b85415168f04762de0a50fdaee43cf54"
-            target="_blank"
-            rel="noreferrer"
-            >초기화 커밋 보기</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="section">
-        <h2>프로젝트 개요</h2>
-        <p>
-          React + TypeScript + Vite 기반으로 구성된 스마트 팩토리 대시보드입니다.
-          제조/성형 모드를 분리하여 공정별 지표를 확인하고, 일/주/월/연 단위
-          필터링으로 추이를 분석할 수 있도록 설계되었습니다.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>핵심 지표</h2>
-        <div class="grid cards">
-          <article class="card">
-            <h3>13 Files Initialized</h3>
-            <p>초기 시스템 구조, 타입, 상수, UI 컴포넌트 구성</p>
-          </article>
-          <article class="card">
-            <h3>+1084 Changes</h3>
-            <p>초기화 커밋 기준 추가/수정 라인 반영</p>
-          </article>
-          <article class="card">
-            <h3>9 제조 + 5 성형 카테고리</h3>
-            <p>제품군/사이트 단위 모니터링 체계 포함</p>
-          </article>
-          <article class="card">
-            <h3>35 설비 샘플 부하 데이터</h3>
-            <p>5개 공정 그룹 × 7개 설비 목업 생성 로직</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>주요 기능</h2>
-        <ul class="list">
-          <li>제조 부하율 / 성형 부하율 모드 전환</li>
-          <li>일/주/월/연 기간 필터 기반 트렌드 분석</li>
-          <li>공정별 평균 부하율, 총 수량, 최대 부하 집중 공정 요약</li>
-          <li>카테고리-설비 단위 Drill-down 상세 보기 구조</li>
-          <li>실시간 대시보드 개발을 위한 Mock 데이터 생성 함수 내장</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>기술 스택</h2>
-        <div class="tags">
-          <span>React 19</span>
-          <span>TypeScript</span>
-          <span>Vite 6</span>
-          <span>Recharts</span>
-          <span>Lucide React</span>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Manufacturing Load Monitoring</p>
-        <p class="muted">Initialized on 2026-02-13 by heejun6905-create</p>
-      </div>
-    </footer>
-
-    <script src="./script.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제조 부하율 모니터링</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/nanumsquareneo@1.0/nanumsquareneo.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'NanumSquareNeo', sans-serif;
+            background-color: #fbfcfd;
+            letter-spacing: -0.02em;
+        }
+        .recharts-text {
+            font-family: 'NanumSquareNeo', sans-serif !important;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
 </html>
